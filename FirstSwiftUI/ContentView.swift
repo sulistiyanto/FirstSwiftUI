@@ -9,8 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let animals = ["anjing", "singa", "kucing", "ular", "ayam", "kambing"]
+    
     var body: some View {
-        Text("Hello, World!")
+        List {
+            ForEach(animals, id: \.self) {
+                Text($0)
+            }
+        }
     }
 }
 
